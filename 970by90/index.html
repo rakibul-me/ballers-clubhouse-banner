@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Banner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(32, 32, 32);
+        }
+        body {
+            width: 970px;
+            height: 90px;
+            margin: 0;
+            overflow: hidden;
+        }
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(231, 134, 163, 0.847), rgba(233, 144, 172, 0.843), #fbb0c5);
+            overflow: hidden;
+        }
+        .banner .balls img {
+            position: absolute;
+            width: 50px;
+        }
+        .banner .balls .ball9, .banner .balls .ball8, .banner .balls .ball5, .banner .balls .ball3 {
+            z-index: 1;
+        }
+        .banner .shutup {
+            height: 80px;
+            margin: 5px;
+            margin-left: 50px;
+        }
+        .banner .glass {
+            position: absolute;
+            bottom: -25px;
+            left: 300px;
+            height: 130px;
+            transform: rotateZ(20deg)
+        }
+        .banner .logo {
+            position: absolute;
+            bottom: 5px;
+            left: 220px;
+            width: 90px;
+        }
+        .banner .text1 {
+            position: absolute;
+            bottom: 10px;
+            left: 520px;
+            width: 130px;
+            z-index: 1;
+        }
+        .banner .text2 {
+            position: absolute;
+            top: 10px;
+            left: 700px;
+            width: 200px;
+            z-index: 1;
+        }
+        .banner .text3 {
+            position: absolute;
+            bottom: 10px;
+            left: 700px;
+            width: 200px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="balls">
+            <img class="ball1" src="../images/ball1.png" alt="ball">
+            <img class="ball2" src="../images/ball1.png" alt="ball">
+            <img class="ball3" src="../images/ball2.png" alt="ball">
+            <img class="ball4" src="../images/ball2.png" alt="ball">
+            <img class="ball5" src="../images/ball3.png" alt="ball">
+            <img class="ball6" src="../images/ball3.png" alt="ball">
+            <img class="ball7" src="../images/ball3.png" alt="ball">
+            <img class="ball8" src="../images/ball4.png" alt="ball">
+            <img class="ball9" src="../images/ball4.png" alt="ball">
+            <img class="ball10" src="../images/ball4.png" alt="ball">
+        </div>
+        <img class="shutup" src="../images/shutupplay.png" alt="shut up and play">
+        <img class="glass" src="../images/glass.png" alt="glass">
+        <img class="logo" src="../images/logo.png" alt="logo">
+        <img class="text1" src="../images/text1.png" alt="Ping pong social darts shuffleboard vr.">
+        <img class="text2" src="../images/text2.png" alt="book now">
+        <img class="text3" src="../images/text3.png" alt="ballersclubhouse.com.au">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script>
+        var balls = document.querySelectorAll('.banner .balls img');
+        balls.forEach((img)=>{
+            gsap.set(img, {width: rndInt(20, 35) ,x: rndInt(-35, 970 - 35), y: rndInt(-30, 90 - 30)})
+        });
+        function moveimg1(){
+            gsap.to(balls[0], {ease: 'power1', duration: 6, x: rndInt(-35, 970 - 35), y: rndInt(-30, 90 - 30)});
+        }
+        moveimg1();
+        setInterval(moveimg1, 6500);
+        function moveimg2(){
+            gsap.to(balls[1], {ease: 'power2', duration: 6.8, x: rndInt(-35, 970 - 35), y: rndInt(-30, 90 - 30)});
+        }
+        moveimg2();
+        setInterval(moveimg2, 8500);
+        function moveimg3(){
+            gsap.to(balls[2], {ease: 'power1', duration: 12, x: rndInt(-35, 970 - 35), y: rndInt(-30, 90 - 30)});
+        }
+        moveimg3();
+        setInterval(moveimg3, 13500);
+        function moveimg4(){
+            gsap.to(balls[3], {ease: 'power1', duration: 6, x: rndInt(-35, 970 - 35), y: rndInt(-30, 90 - 30)});
+        }
+        moveimg4();
+        setInterval(moveimg4, 9500);
+        function moveimg5(){
+            gsap.to(balls[4], {ease: 'power3', duration: 7.5, x: rndInt(-35, 970 - 35), y: rndInt(-30, 90 - 30)});
+        }
+        moveimg5();
+        setInterval(moveimg5, 9000);
+        function moveimg6(){
+            gsap.to(balls[5], {ease: 'power1', duration: 8.9, x: rndInt(-35, 970 - 35), y: rndInt(-30, 90 - 30)});
+        }
+        moveimg6();
+        setInterval(moveimg6, 10600);
+        function moveimg7(){
+            gsap.to(balls[6], {ease: 'power1', duration: 10.6, x: rndInt(-35, 970 - 35), y: rndInt(-30, 90 - 30)});
+        }
+        moveimg7();
+        setInterval(moveimg7, 12800);
+        function moveimg8(){
+            gsap.to(balls[7], {ease: 'power1', duration: 7.9, x: rndInt(-35, 970 - 35), y: rndInt(-30, 90 - 30)});
+        }
+        moveimg8();
+        setInterval(moveimg8, 9000);
+        function moveimg9(){
+            gsap.to(balls[8], {ease: 'power1', duration: 6, x: rndInt(-35, 970 - 35), y: rndInt(-30, 90 - 30)});
+        }
+        moveimg9();
+        setInterval(moveimg9, 8600);
+        function moveimg10(){
+            gsap.to(balls[9], {ease: 'power1', duration: 4.5, x: rndInt(-35, 970 - 35), y: rndInt(-30, 90 - 30)});
+        }
+        moveimg10();
+        setInterval(moveimg10, 5900);
+        var shuttl = gsap.timeline({repeat: -1, repeatDelay: 2.5});
+        shuttl.from('.banner .shutup', {duration: 0.3, ease: "back", x: 0, y: -150, opacity: 0})
+            .from('.banner .glass', {duration: 0.3, ease: "back", x: 0, y: 100, opacity: 0}, "-=0.08")
+            .from('.banner .logo', {duration: 0.3, ease: "back", x: -100, y: 0, opacity: 0}, "-=0.05")
+            .from('.banner .text1', {duration: 0.3, ease: "power2", x: -150, y: 0, opacity: 0}, "-=0.5")
+            .from('.banner .text2', {duration: 0.3, ease: "power3", x: -150, y: 0, opacity: 0}, "-=0.6")
+            .from('.banner .text3', {duration: 0.3, ease: "power4", x: 0, y: 100, opacity: 0}, "-=0.7");
+
+        function rndInt(min, max){
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        function rndFlt(min, max){
+            return Math.random() * (max - min) + min;
+        }
+    </script>
+</body>
+</html>
